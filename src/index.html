@@ -15,7 +15,7 @@
 
 <body>
     <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" onsubmit="onSubmit(event)">
-        <fieldset class="box">
+        <fieldset class="fieldset-box">
             <legend>Personal information</legend>
             <label class="label">
                 Surname:
@@ -25,10 +25,9 @@
                 Name:
                 <input type="text" name="name" autocomplete="off" required>
             </label><br>
-            <label class="label">
-                How old are You?
-                <input type="number" value="12" name="age" min="10" max="35" data-qa="field-value">
-            </label><br>
+          <label class="label"> How old are You?
+            <input name="years" data-qa="field-value" type="number" value="12" min="1" max="100">
+          </label><br>
             <label class="label">
                 Full date of birth:
                 <input type="date" name="date">
@@ -38,7 +37,7 @@
                 <input type="checkbox" name="agreement" required>
             </label>
         </fieldset>
-        <fieldset class="box">
+        <fieldset class="fieldset-box">
             <legend>Registration</legend>
             <label class="label">
                 E-mail:
@@ -49,24 +48,26 @@
                 <input type="password" name="password" minlength="6" maxlength="12">
             </label>
         </fieldset>
-        <fieldset class="box">
+        <fieldset class="fieldset-box">
             <legend>An interesting fact about you!</legend>
-            <label class="label" for="love_cat">
+            <div class="label">
                 Do you love cats?
               <label>
-                <input type="radio" name="love_cat" id="love_cat">Yes
+                <input type="radio" name="love_cat" id="love_cat">
+                Yes
               </label>
               <label>
-                <input type="radio" name="love_cat">No
+                <input type="radio" name="love_cat">
+                No
               </label>
-            </label><br>
+            </div><br>
             <label class="label">
                 What is your favorite color?
                 <input type="color" name="color">
             </label><br>
             <label class="label">
                 What time do you go to bed?
-                <input type="time" name="time">
+                <input type="time" step="1" name="time">
             </label><br>
             <label class="label">
                 What are your favorite brand of cars?
@@ -81,7 +82,7 @@
                 <input type="range" name="range" value="0">
             </label>
         </fieldset>
-        <fieldset class="box">
+        <fieldset class="fieldset-box">
             <legend>Additional info:</legend>
             <label class="label">
                 Comments:
